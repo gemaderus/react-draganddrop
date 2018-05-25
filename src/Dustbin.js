@@ -57,6 +57,10 @@ function collect(connect, monitor) {
 }
 
 class Dustbin extends Component {
+  state = {
+    components: []
+  }
+
   static propTypes = {
     connectDropTarget: PropTypes.func.isRequired,
     isOver: PropTypes.bool.isRequired,
@@ -65,7 +69,7 @@ class Dustbin extends Component {
   }
 
   render() {
-    const { canDrop, isOver, allowedDropEffect, connectDropTarget } = this.props
+    const { canDrop, isOver, allowedDropEffect, connectDropTarget, children } = this.props
     const isActive = canDrop && isOver
 
     let backgroundColor = '#222'
@@ -81,6 +85,7 @@ class Dustbin extends Component {
         <br />
         <br />
         {isActive ? 'Release to drop' : 'Drag a box here'}
+        {children}
       </div>,
     )
   }

@@ -18,9 +18,12 @@ const boxSource = {
     }
   },
 
-  endDrag(props, monitor) {
+  endDrag (props, monitor) {
+    console.log(props)
     const item = monitor.getItem()
     const dropResult = monitor.getDropResult()
+    const {onDropComponent} = props
+    onDropComponent(item.name)
 
     if (dropResult) {
       let alertMessage = ''
@@ -37,7 +40,6 @@ const boxSource = {
           dropResult.name
         }`
       }
-      alert(alertMessage) // eslint-disable-line no-alert
     }
   },
 }
