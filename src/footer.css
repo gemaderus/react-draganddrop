@@ -1,0 +1,42 @@
+.footer {
+  padding: 3rem 1rem;
+  background-color: #212240;
+}
+
+.footer, .footer a {
+  color: #fff;
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.navContainer {
+  display: flex;
+  text-align: left;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.navContainer li {
+  margin-bottom: 0.5rem;
+}
+
+.store {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.store li:first-child {
+  margin-right: 0.4rem;
+}
+
+.buttonLight-outline {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 0.6rem;
+  display: flex;
+  border-radius: .5rem;
+  font-size: 0.8rem;
+}

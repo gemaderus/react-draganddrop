@@ -1,0 +1,43 @@
+.header {
+  background-color: #fff;
+  padding: 1rem 0.6rem;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navItems {
+  display: flex;
+  align-items: center;
+}
+
+.navItems li {
+  margin-right: 1rem;
+}
+
+.navItems li:last-child {
+  margin-right: 0;
+}
+
+.navItem-Link {
+  color: #885DF4;
+  text-decoration: none;
+}
+
+.logo svg {
+  fill: #885DF4;
+  width: 100%;
+  display: block;
+}
+
+.btnMain-outline {
+  background-color: transparent;
+  color: #865bf4;
+  border-radius: 4px;
+  padding: 0.4rem;
+  border: 1px solid #865bf4;
+  text-decoration: none;
+}

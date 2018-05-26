@@ -4,15 +4,12 @@ import { DropTarget } from 'react-dnd'
 import ItemTypes from './ItemTypes'
 
 const style = {
-  height: '12rem',
-  width: '12rem',
-  marginRight: '1.5rem',
-  marginBottom: '1.5rem',
+  minHeight: '100vh',
   color: 'white',
-  padding: '1rem',
   textAlign: 'center',
   fontSize: '1rem',
   lineHeight: 'normal',
+  backgroundColor: '#885DF4',
 }
 
 const boxTarget = {
@@ -23,25 +20,6 @@ const boxTarget = {
     }
   },
 }
-
-// @DropTarget(ItemTypes.BOX, boxTarget, (connect, monitor) => ({
-//   connectDropTarget: connect.dropTarget(),
-//   isOver: monitor.isOver(),
-//   canDrop: monitor.canDrop(),
-// }))
-
-/**
- * Specifies which props to inject into your component.
- */
-// function collect(connect, monitor) {
-//   return {
-//     // Call this function inside render()
-//     // to let React DnD handle the drag events:
-//     connectDragSource: connect.dragSource(),
-//     // You can ask the monitor about the current drag state:
-//     isDragging: monitor.isDragging()
-//   };
-// }
 
 function collect(connect, monitor) {
   return {
@@ -72,19 +50,16 @@ class Dustbin extends Component {
     const { canDrop, isOver, allowedDropEffect, connectDropTarget, children } = this.props
     const isActive = canDrop && isOver
 
-    let backgroundColor = '#222'
-    if (isActive) {
-      backgroundColor = 'darkgreen'
-    } else if (canDrop) {
-      backgroundColor = 'darkkhaki'
-    }
+    // let backgroundColor = '#222'
+    // if (isActive) {
+    //   backgroundColor = 'darkgreen'
+    // } else if (canDrop) {
+    //   backgroundColor = 'darkkhaki'
+    // }
 
     return connectDropTarget(
-      <div style={{ ...style, backgroundColor }}>
-        {`Works with ${allowedDropEffect} drop effect`}
-        <br />
-        <br />
-        {isActive ? 'Release to drop' : 'Drag a box here'}
+      <div style={{ ...style}}>
+        {/* {isActive ? 'Release to drop' : 'Drag a box here'} */}
         {children}
       </div>,
     )

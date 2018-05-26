@@ -3,11 +3,14 @@ import { DragDropContextProvider } from 'react-dnd'
 import HTML5Backend from 'react-dnd-html5-backend'
 import Dustbin from './Dustbin'
 import Box from './Box'
-
 import Header from './Header'
+import Hero from './Hero'
+import Footer from './Footer'
 
 const Catalog = {
-  header: Header
+  header: Header,
+  hero: Hero,
+  footer: Footer
 }
 
 export default class Container extends Component {
@@ -29,8 +32,13 @@ export default class Container extends Component {
 
     return (
       <DragDropContextProvider backend={HTML5Backend}>
-        <div>
+        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
           <div>
+            <Box key="Header" name="header" onDropComponent={this.onDropComponent} />
+            <Box key="Hero" name="hero" onDropComponent={this.onDropComponent} />
+            <Box key="Footer" name="footer" onDropComponent={this.onDropComponent} />
+          </div>
+          <div style={{ width: '70%' }}>
             <Dustbin allowedDropEffect="any">
               {components.map((c, index) => {
                 const Component = Catalog[c]
@@ -41,11 +49,6 @@ export default class Container extends Component {
 
             {/*<Dustbin allowedDropEffect="copy" />
             <Dustbin allowedDropEffect="move" />*/}
-          </div>
-          <div style={{ display: 'flex' }}>
-            <Box key="Header" name="header" onDropComponent={this.onDropComponent}/>
-            <Box key="Sidebar" name="Sidebar" onDropComponent={this.onDropComponent}/>
-            <Box key="Hero" name="Hero" onDropComponent={this.onDropComponent}/>
           </div>
         </div>
       </DragDropContextProvider>

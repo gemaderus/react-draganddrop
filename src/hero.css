@@ -1,0 +1,34 @@
+.hero {
+  background-color: #fff;
+  padding: 3rem 1rem;
+}
+
+.titleHero {
+  font-size: 2.25rem;
+  line-height: 2.75rem;
+  color: #212240;
+  margin-top: 0;
+}
+
+.titleHero span {
+  font-weight: 400;
+}
+
+.button {
+  border-radius: .5rem;
+  border-style: solid;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5rem;
+  padding: 0.6rem 1.5rem 0.6rem;
+  text-align: center;
+  transition: color 125ms linear, background-color 125ms linear;
+  white-space: nowrap;
+}
+
+.button-dark{
+  color: #fff;
+  background-color: #212240;
+}

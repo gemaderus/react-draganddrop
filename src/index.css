@@ -1,5 +1,55 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+@font-face {
+  font-family: "CabifyCircularWeb";
+  src: url(/fonts/CabifyCircularWeb-Book.eot);
+  src: url(/fonts/CabifyCircularWeb-Book.eot?#iefix) format("embedded-opentype"), url(/fonts/CabifyCircularWeb-Book.woff) format("woff"), url(/fonts/CabifyCircularWeb-Book.ttf) format("truetype"), url(/fonts/CabifyCircularWeb-Book.svg) format("svg");
+  font-weight: 400;
+  font-style: normal;
+  -ms-font-feature-settings: "1" 1,"0" 0,"1" 1;
+  -o-font-feature-settings: "1" 1,"0" 0,"1" 1;
+  font-feature-settings: "1" 1, "0" 0, "1" 1; 
+}
+
+@font-face {
+  font-family: "CabifyCircularWeb";
+  src: url(/fonts/CabifyCircularWeb-Bold.eot);
+  src: url(/fonts/CabifyCircularWeb-Bold.eot?#iefix) format("embedded-opentype"), url(/fonts/CabifyCircularWeb-Bold.woff) format("woff"), url(/fonts/CabifyCircularWeb-Bold.ttf) format("truetype"), url(/fonts/CabifyCircularWeb-Bold.svg) format("svg");
+  font-weight: 600;
+  font-style: normal;
+  -ms-font-feature-settings: "1" 1,"0" 0,"1" 1;
+  -o-font-feature-settings: "1" 1,"0" 0,"1" 1;
+  font-feature-settings: "1" 1, "0" 0, "1" 1; 
+}
+
+@font-face {
+  font-family: "CabifyCircularWeb";
+  src: url(/fonts/CabifyCircularWeb-Light.eot);
+  src: url(/fonts/CabifyCircularWeb-Light.eot?#iefix) format("embedded-opentype"), url(/fonts/CabifyCircularWeb-Light.woff) format("woff"), url(/fonts/CabifyCircularWeb-Light.ttf) format("truetype"), url(/fonts/CabifyCircularWeb-Light.svg) format("svg");
+  font-weight: 300;
+  font-style: normal;
+  -ms-font-feature-settings: "1" 1,"0" 0,"1" 1;
+  -o-font-feature-settings: "1" 1,"0" 0,"1" 1;
+  font-feature-settings: "1" 1, "0" 0, "1" 1; 
+}
+
 body {
+  -webkit-font-smoothing: antialiased;
+  background-color: #eee;
+  font: 400 16px/24px 'CabifyCircularWeb';
+  position: relative;
   margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+  padding: 0; 
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; 
 }
