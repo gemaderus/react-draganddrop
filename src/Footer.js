@@ -4,7 +4,7 @@ import './footer.css'
 class Footer extends Component {
   render() {
     return (
-      <footer className='footer'>
+      <footer className='footer' {...this.props}>
         <div className="navContainer">
           <nav>
             <h1>About</h1>
@@ -12,7 +12,7 @@ class Footer extends Component {
               <li><a href="https://inside.cabify.com" title="Blog Cabify" target="_self">Blog</a></li>
               <li><a href="https://cabify.com/en/jobs" target="_self">Jobs</a></li>
               <li><a href="https://cabify.com/en/press" target="_self">Press</a></li>
-              <li><a href="https://cabify.com/en/security" target="_self">Security</a></li >
+              <li><a href="https://cabify.com/en/security" target="_self">Security</a></li>
             </ul>
           </nav>
           <nav>
@@ -28,7 +28,7 @@ class Footer extends Component {
           <nav>
             <h1>Support</h1>
             <ul>
-              <li><a href="https://cabify.com/en/spain/terms" title="Terms and Conditions" class="termsLink=" target="_self">Terms &amp; Conditions</a></li>
+              <li><a href="https://cabify.com/en/spain/terms" title="Terms and Conditions" className="termsLink=" target="_self">Terms &amp; Conditions</a></li>
               <li><a href="https://cabify.com/en/spain/privacy_policy" title="Privacy" target="_self">Privacy</a></li>
               <li><a href="https://help.cabify.com" title="Help Center" target="_self">Help</a></li>
             </ul>

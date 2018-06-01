@@ -4,12 +4,12 @@ import { DropTarget } from 'react-dnd'
 import ItemTypes from './ItemTypes'
 
 const style = {
-  minHeight: '100vh',
+  minHeight: '90vh',
   color: 'white',
-  textAlign: 'center',
   fontSize: '1rem',
   lineHeight: 'normal',
   backgroundColor: '#885DF4',
+  width: '50%'
 }
 
 const boxTarget = {

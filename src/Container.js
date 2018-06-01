@@ -6,6 +6,7 @@ import Box from './Box'
 import Header from './Header'
 import Hero from './Hero'
 import Footer from './Footer'
+import Action from './Action'
 
 const Catalog = {
   header: Header,
@@ -15,7 +16,10 @@ const Catalog = {
 
 export default class Container extends Component {
   state = {
-    components: []
+    components: [],
+    current: null,
+    type: null,
+    styles: null
   }
 
   onDropComponent = (component) => {
@@ -27,28 +31,63 @@ export default class Container extends Component {
     })
   }
 
+  // handleDelete = (component) => {
+
+  //   this.setState(state => {
+  //     return {
+  //       ...state,
+  //       components: state.components.splice([component])
+  //     }
+  //   })
+  // }
+
+  onStyleChange = (attr, value) => {
+    const {styles} = this.state
+    const newStyle = {
+      ...styles,
+      [attr]: value
+    }
+
+    this.setState(state => {
+      return {
+        ...state,
+        styles: newStyle
+      }
+    })
+  }
+
+  handleClick = (type, index) => {
+    this.setState({ type, current: index });
+    console.log(type, index);
+  }
+
   render() {
-    const {components} = this.state
+
+    const {components, type, current, styles} = this.state
 
     return (
       <DragDropContextProvider backend={HTML5Backend}>
-        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+        <div style={{ display: 'flex', padding: '1rem'}}>
           <div>
             <Box key="Header" name="header" onDropComponent={this.onDropComponent} />
             <Box key="Hero" name="hero" onDropComponent={this.onDropComponent} />
             <Box key="Footer" name="footer" onDropComponent={this.onDropComponent} />
           </div>
-          <div style={{ width: '70%' }}>
+          <div style={{ flex: 1, display: 'flex', justifyContent: 'center', 'position': 'relative' }}>
             <Dustbin allowedDropEffect="any">
               {components.map((c, index) => {
                 const Component = Catalog[c]
-                return <Component key={`${c}${index}`}/>
+                const styleProps = (type === c && index === current) ? styles : null
+                return <Component key={`${c}${index}`} onClick={e => {
+                  e.preventDefault()
+                  this.handleClick(c, index)
+                }} style={styleProps} />
               }
               )}
-            </Dustbin>
 
-            {/*<Dustbin allowedDropEffect="copy" />
-            <Dustbin allowedDropEffect="move" />*/}
+              { type ? <Action type={type} onStyleChange={this.onStyleChange} /> : null }
+
+            </Dustbin>
           </div>
         </div>
       </DragDropContextProvider>

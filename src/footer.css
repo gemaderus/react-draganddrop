@@ -1,6 +1,7 @@
 .footer {
-  padding: 3rem 1rem;
+  padding: 3rem 1.6rem;
   background-color: #212240;
+  font-size: 1.6rem;
 }
 
 .footer, .footer a {
@@ -19,7 +20,7 @@
 }
 
 .navContainer li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .store {
@@ -28,15 +29,15 @@
 }
 
 .store li:first-child {
-  margin-right: 0.4rem;
+  margin-right: 1rem;
 }
 
 .buttonLight-outline {
   background-color: transparent;
   border: 1px solid #fff;
   color: #fff;
-  padding: 0.6rem;
+  padding: 1rem;
   display: flex;
   border-radius: .5rem;
-  font-size: 0.8rem;
+  font-size: 1.4rem;
 }

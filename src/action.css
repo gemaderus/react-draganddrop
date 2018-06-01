@@ -1,0 +1,14 @@
+.formConfig {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: rgb(136, 93, 244);
+  min-width: 300px;
+  margin-left: 2rem;
+  font-size: 1.6rem;
+}
+
+.formConfig select {
+  display: block;
+  margin-top: 10px;
+}

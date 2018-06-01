@@ -1,11 +1,3 @@
-html {
-  box-sizing: border-box;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
 @font-face {
   font-family: "CabifyCircularWeb";
   src: url(/fonts/CabifyCircularWeb-Book.eot);
@@ -14,7 +6,7 @@ html {
   font-style: normal;
   -ms-font-feature-settings: "1" 1,"0" 0,"1" 1;
   -o-font-feature-settings: "1" 1,"0" 0,"1" 1;
-  font-feature-settings: "1" 1, "0" 0, "1" 1; 
+  font-feature-settings: "1" 1, "0" 0, "1" 1;
 }
 
 @font-face {
@@ -25,7 +17,7 @@ html {
   font-style: normal;
   -ms-font-feature-settings: "1" 1,"0" 0,"1" 1;
   -o-font-feature-settings: "1" 1,"0" 0,"1" 1;
-  font-feature-settings: "1" 1, "0" 0, "1" 1; 
+  font-feature-settings: "1" 1, "0" 0, "1" 1;
 }
 
 @font-face {
@@ -36,20 +28,29 @@ html {
   font-style: normal;
   -ms-font-feature-settings: "1" 1,"0" 0,"1" 1;
   -o-font-feature-settings: "1" 1,"0" 0,"1" 1;
-  font-feature-settings: "1" 1, "0" 0, "1" 1; 
+  font-feature-settings: "1" 1, "0" 0, "1" 1;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 body {
   -webkit-font-smoothing: antialiased;
   background-color: #eee;
-  font: 400 16px/24px 'CabifyCircularWeb';
+  font: 400 16px 'CabifyCircularWeb';
   position: relative;
   margin: 0;
-  padding: 0; 
+  padding: 0;
 }
 
 ul {
   list-style: none;
   margin: 0;
-  padding: 0; 
+  padding: 0;
 }
