@@ -12,6 +12,7 @@ export default {
       values: ['12px', '14px', '16px']
     }
   },
+
   hero: {
     backgroundColor: {
       type: 'select',

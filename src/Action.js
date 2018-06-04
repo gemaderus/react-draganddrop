@@ -7,6 +7,8 @@ class Action extends Component {
   //   let value = event.target.value;
   // }
 
+
+
   onChange = (attr, value) => {
     console.log(attr, value)
     const {onStyleChange} = this.props
@@ -20,7 +22,9 @@ class Action extends Component {
   render() {
     const config = StyleConfig[this.props.type]
     const attributes = Object.keys(config)
-
+    const el = document.querySelector(this.props.type)
+    console.log(this.getStyle(el))
+    //console.log(this.getStyle(this.props.type));
     const renderFormElement = attr => {
       const options = config[attr]
 
@@ -32,7 +36,6 @@ class Action extends Component {
           {options.values.map(v => <option key={v.value || v} value={v.value || v}>{v.label || v}</option>)}
         </select>
       }
-
       return null
     }
 

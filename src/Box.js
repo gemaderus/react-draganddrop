@@ -19,7 +19,7 @@ const boxSource = {
   },
 
   endDrag (props, monitor) {
-    console.log(props)
+    // console.log(props)
     const item = monitor.getItem()
     const dropResult = monitor.getDropResult()
     const {onDropComponent} = props

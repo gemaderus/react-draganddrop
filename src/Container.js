@@ -58,7 +58,7 @@ export default class Container extends Component {
 
   handleClick = (type, index) => {
     this.setState({ type, current: index });
-    console.log(type, index);
+    // console.log(type, index);
   }
 
   render() {
